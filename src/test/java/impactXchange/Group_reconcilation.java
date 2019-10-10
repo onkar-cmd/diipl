@@ -68,6 +68,7 @@ public class Group_reconcilation {
 	public void click_on_that_two_movies_and_set_status_to_Active_and_approve_that_movie() throws Throwable 
 	{
 		
+		
 	}
 
 	@Then("^Add two movies from MMS application\\.$")

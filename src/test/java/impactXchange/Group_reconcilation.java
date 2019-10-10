@@ -67,7 +67,7 @@ public class Group_reconcilation {
 	@Then("^Click on that two movies and set status to Active and approve that movie\\.$")
 	public void click_on_that_two_movies_and_set_status_to_Active_and_approve_that_movie() throws Throwable 
 	{
-		
+		System.out.println("Testing Git hub");
 		
 	}
 

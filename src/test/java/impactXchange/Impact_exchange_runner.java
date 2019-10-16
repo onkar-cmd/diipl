@@ -11,10 +11,10 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 
 	
-@CucumberOptions(features = { "src\\test\\java\\impactXchange\\group_reconcilation.feature" },
+@CucumberOptions(features = { "src\\test\\java\\impactXchange\\impact_exchange_scenarios.feature" },
 	glue = {"impactXchange"},
-	tags = {"@Group_reconcile"},
-	dryRun = true,
+	tags = {"@smoke_testing"},
+	dryRun = false,
 	format = {
 	        "pretty",
 	        "html:target/UFO/ufo_pretty",

@@ -63,7 +63,8 @@ public class Special_characters_testing {
 	@Then("^Check for edit company page insert invalid special characters\\.$")
 	public void check_for_edit_company_page_insert_invalid_special_characters_and_valid_alphabets_and_numbers()
 			throws Throwable {
-		xp.user_admin_btn();
+		
+		/*xp.user_admin_btn();
 		xp.manage_account_btn();
 		xp.add_edit_account_btn();
 
@@ -77,7 +78,7 @@ public class Special_characters_testing {
 
 			xp.next_btn();
 
-		}
+		}*/
 
 	}
 

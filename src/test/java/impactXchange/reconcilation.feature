@@ -1,4 +1,3 @@
-
 Feature: Recocilation process
    @testing_add_movie @Reconcile @Indivdual_reconcile
    Scenario: To test movie individual reconcile for specific exhibitor.
@@ -15,5 +14,7 @@ Feature: Recocilation process
    |854|032100510039|
    Then  Check in Manage Contracts and Click on Upcoming Pacts.
    Then  Check and Validate  that movie is Re-concile.
-   
-   
+ 
+ 
+ 
+ 

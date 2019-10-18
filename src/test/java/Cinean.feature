@@ -1,5 +1,7 @@
  
 Feature: Cinean and Cinean Approver.
+
+#pass
 @Sign_up_merchant
 Scenario: Signup with merchant.
 Given Click on Sign-up button.
@@ -7,6 +9,7 @@ Then Enter name,email,mobile number,password,select language,select User as merc
 Then Click on Sign up button .
 Then you will go to home page.
 
+#pass
 @Sign_up_merchant_using_google_account
 Scenario: Signup with merchant using google api.
 Given Click on Sign-up button.
@@ -14,6 +17,7 @@ Then Click on google button .
 Then Select account want to sign up.
 Then you will go to home page. 
  
+ #pass
  @Create_campaign_merchant
 Scenario: Create new Campaign from merchant
 Given Login with predefined account.
@@ -53,14 +57,14 @@ Scenario: Testing for campaign.
 Given Login with predefined account.
 Then Click on new campaign.
 Then Complete all campaign steps.
-Then Go to Cinean Approv app 
+Then Go to Cinean Approv app .
 Then Click on that media and check all terms and condition.
-Then Click on Approve button
+Then Click on Approve button.
 Then Go to Cinean app check if that media is approved or not.
 
 #Fail
 @notification
-Scenario: Testing for Notification icon
+Scenario: Testing for Notification icon.
 Given not Working or not implemented.
 
 #Fail
@@ -69,6 +73,26 @@ Scenario: Testing for threater preview.
 Given Login with predefined account.
 Then Click on media.
 Then Click on Threater preview.
+
+#Fail
+@Media_preview
+Scenario: Testing for threater preview.
+Given Login with predefined account.
+Then Click on media.
+Then Click on Media preview.
+
+#pass
+@Download
+Scenario: Testing for threater preview.
+Given Login with predefined account.
+Then Click on media.
+Then Click on Download.
+
+
+
+
+
+
 
 
 

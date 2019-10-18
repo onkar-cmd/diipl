@@ -51,7 +51,7 @@ Then Click on Choose template.
 Then Click on Edit button.
 #Shows Cinean has stopped.
 
-#Fail
+#Pass
 @Approved_Media
 Scenario: Testing for campaign.
 Given Login with predefined account.
@@ -63,16 +63,10 @@ Then Click on Approve button.
 Then Go to Cinean app check if that media is approved or not.
 
 #Fail
+#Notification is about cancellation of campaign
 @notification
 Scenario: Testing for Notification icon.
 Given not Working or not implemented.
-
-#Fail
-@Threater_preview
-Scenario: Testing for threater preview.
-Given Login with predefined account.
-Then Click on media.
-Then Click on Threater preview.
 
 #Pass
 @Media_preview
@@ -93,7 +87,7 @@ Then Click on Download.
 Scenario: Testing for Refer Code.
 Given Login With predefined account.
 Then Go to profile and click on Refer a code and Click on Copy button.
-Then Log out 
+Then Log out.
 Then Create a new user and paste refer code in sign up page.
 Then Login with Refered code account and see that reward point is credited with 5000.
 
@@ -111,10 +105,7 @@ Then Log out and see that password is changed or not.
 @Track_your_campaign 
 #Funcnality is incomplete.
 
-
-
-
- 
+#Froget password link doesnt sent to respective email id
 
 
 

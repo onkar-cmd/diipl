@@ -14,7 +14,3 @@ Feature: Recocilation process
    |854|032100510039|
    Then  Check in Manage Contracts and Click on Upcoming Pacts.
    Then  Check and Validate  that movie is Re-concile.
- 
- 
- 
- 

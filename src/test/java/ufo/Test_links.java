@@ -38,7 +38,6 @@ public class Test_links {
 			RequestSpecification httpRequest = RestAssured.given();
 			Response r = httpRequest.get(ele.get(i).getAttribute("href"));
 			System.out.println(r.getStatusCode());
-			
 			}
 			catch (Exception e) 
 			{

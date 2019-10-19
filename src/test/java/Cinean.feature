@@ -104,9 +104,5 @@ Then Log out and see that password is changed or not.
 
 @Track_your_campaign 
 #Funcnality is incomplete.
-
 #Froget password link doesnt sent to respective email id
-
-
-
 

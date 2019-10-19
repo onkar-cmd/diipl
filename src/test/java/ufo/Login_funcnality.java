@@ -13,11 +13,8 @@ public class Login_funcnality {
 		this.wd = wd;
 
 	}
-
-	public void login_ufo(String username, String password, String usr_type) throws InterruptedException 
-	{
-
-		wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    public void login_ufo(String username, String password, String usr_type) throws InterruptedException 
+	{   wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		wd.manage().window().maximize();
 		Thread.sleep(2000);
 		wd.get("http://stagingiro.ufomoviez.com/");
@@ -27,8 +24,4 @@ public class Login_funcnality {
 		Thread.sleep(2000);
 		uop.user_type(usr_type);
 		uop.login_btn();
-		
-
-	}
-
-}
+	}}

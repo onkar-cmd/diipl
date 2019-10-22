@@ -13,8 +13,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
 	
 @CucumberOptions(features = { "src\\test\\java\\impactXchange\\impact_exchange_scenarios.feature" },
 	glue = {"impactXchange"},
-	tags = {"@smoke_testing"},
-	dryRun = false,
+	tags = {"@testing_link_movie"},
+	dryRun = true,
 	format = {
 	        "pretty",
 	        "html:target/UFO/ufo_pretty",

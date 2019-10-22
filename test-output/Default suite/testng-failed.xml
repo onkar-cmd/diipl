@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testng_framework.Login_testng">
+      <class name="impactXchange.Impact_exchange_runner">
         <methods>
-          <include name="s3"/>
-          <include name="s2"/>
-          <include name="s1"/>
+          <include name="setUpClass"/>
+          <include name="feature"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- testng_framework.Login_testng -->
+      </class> <!-- impactXchange.Impact_exchange_runner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

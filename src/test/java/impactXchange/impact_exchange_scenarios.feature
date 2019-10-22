@@ -12,15 +12,45 @@ Feature: Add Edit account
     Then  Check for edit screen insert invalid special characters.
     
    @testing_add_new_company @regression_testing @exhibitor
-   Scenario: To test add exhibitor and validating if add and approves properly.
+   Scenario Outline: To test add exhibitor and validating if add and approves properly.
    Given A login with valid username and password.
    Then  Create new exhibitor and add certain details and click on next,with below available data
-   |JK company|JK support|onkarb@diipl.com|456312|lane1 road|Thane|Ernakulam| Kerala| 022-544554545| JK threater|10000|20000|30000|
    Then Create class for new exhibitor and click on next button.
-   |Sofa|Balcony|
    Then Create Screen for new exhibitor with ac,ufo and webcode and click on next button .
-   |Screen1|1234|
    And  According to the screen_name and class_name  assign ticket_rate and seats and click on web-booking allowed checkbox and then click on add button.
-   |100|50|
    Then  Click on that exhibitor and validate if it is active.
    Then  Click on approve button.
+  Examples:
+  |Moviename|
+  |Jumbo|
+   
+   
+   @testing_link_movie @cineworld @Add_link
+   Scenario Outline: To test Add movie to Link UFO movie
+   Given Login .
+   Then Click on new movie .
+   Then click on icon link Ufo movie "<Movie_name>".
+   Then Add all details about movie. 
+   Date: "Saturday, October 05, 2019" , 
+   Rating: "U" , 
+   generic: "Animation" , 
+   language: "English" , 
+   type: "3D" ,
+   production: "Aamir Khan Productions Pvt. Ltd." , 
+   Movie-length: "150" , 
+   director: "George Miller" ,
+   music-director: "Junkie XL ,Tom Hardy" , 
+   movie-stars: "Charlize Theron,Nicholas Hoult,Hugh Keays-Byrne,Rosie Huntington-Whiteley,Riley Keough,Zoë Kravitz,Abbey Lee,Courtney Eaton" .
+   Then close browser.
+   Examples:
+   |Movie_name|
+   |War|
+   
+   
+   @Edit_link
+   Scenario: To test edit movie to link UFO movie
+   Given Login.
+   Then Click on movie .
+   Then Click on icon link ufo movie.
+   
+    

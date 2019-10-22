@@ -251,6 +251,17 @@ public class Xchange_properties {
 		
 
 	}
+	
+	@FindBy(how = How.XPATH, using = "//a[@title='Link Cineworld']") // Link Ufo Movie link button 
+	private WebElement link_ufo_movie;
+
+	public void link_ufo_movie()
+	{
+		
+		link_ufo_movie.click();
+		
+
+	}
 
 	// movie
 	// creation--------------------------------------------------------------------------------
@@ -414,6 +425,16 @@ public class Xchange_properties {
 		addnew_threater_layout.click();
 
 	}
+	
+	@FindBy(how = How.XPATH, using = "//button[@onclick='linkUfoMovie()']") // Link ufo movie button
+	private WebElement link_ufo_btn;
+
+	public void link_ufo_btn() {
+		link_ufo_btn.click();
+
+	}
+	
+	
 
 	@FindBy(how = How.ID, using = "MainContentPlaceHolder_ddlExhibitor") // select exhibitor
 	private WebElement select_exhibitor;
@@ -766,6 +787,8 @@ public void add_movie(String mo, String date_picker, String cer, String gen, Str
 		movie_stars(ms);
 		company_save_btn();
 		Thread.sleep(5000);
+		
+		                      
 	}
 
 }

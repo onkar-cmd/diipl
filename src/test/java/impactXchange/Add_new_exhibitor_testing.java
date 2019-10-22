@@ -49,7 +49,19 @@ public class Add_new_exhibitor_testing {
 	@Then("^Create new exhibitor and add certain details and click on next,with below available data$")
 	public void create_new_exhibitor_and_add_certain_details_and_click_on_next_with_below_available_data(DataTable details) throws Throwable {
 		List<List<String>> data = details.raw();
-	    xp.add_exhibitor(data.get(0).get(0), data.get(0).get(1), data.get(0).get(2), data.get(0).get(3), data.get(0).get(4), data.get(0).get(5), data.get(0).get(6), data.get(0).get(7) , data.get(0).get(8), data.get(0).get(9),  data.get(0).get(10), data.get(0).get(11), data.get(0).get(12));
+	    xp.add_exhibitor(data.get(0).get(0)
+	    		, data.get(0).get(1),
+	    		data.get(0).get(2), 
+	    		data.get(0).get(3),
+	    		data.get(0).get(4), 
+	    		data.get(0).get(5),
+	    		data.get(0).get(6), 
+	    		data.get(0).get(7) ,
+	    		data.get(0).get(8),
+	    		data.get(0).get(9),  
+	    		data.get(0).get(10), 
+	    		data.get(0).get(11),
+	    		data.get(0).get(12));
 	    
 	   
 	}

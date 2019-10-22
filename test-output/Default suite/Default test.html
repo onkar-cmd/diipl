@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Oct 19 15:26:30 IST 2019</td>
+<td>Started on:</td><td>Mon Oct 21 12:46:00 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (74 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (642 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,19 +67,19 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testng_framework.Login_testng.s1()'><b>s1</b><br>Test class: testng_framework.Login_testng</td>
-<td><div><pre>org.testng.TestNGException: 
-Method public void testng_framework.Login_testng.s1(java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : getdata
-	at org.testng.internal.Parameters.findDataProvider(Parameters.java:513)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:691)
+<td title='impactXchange.Impact_exchange_runner.feature()'><b>feature</b><br>Test class: impactXchange.Impact_exchange_runner<br>Test method: Run cucumber Features</td>
+<td><div><pre>java.lang.RuntimeException: cucumber.runtime.CucumberException: Error parsing feature file src/test/java/impactXchange/impact_exchange_scenarios.feature
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
 	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
 	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
@@ -100,11 +100,57 @@ Method public void testng_framework.Login_testng.s1(java.lang.String) throws jav
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace15380390", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace15380390'><pre>org.testng.TestNGException: 
-Method public void testng_framework.Login_testng.s1(java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : getdata
-	at org.testng.internal.Parameters.findDataProvider(Parameters.java:513)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:691)
+Caused by: cucumber.runtime.CucumberException: Error parsing feature file src/test/java/impactXchange/impact_exchange_scenarios.feature
+	at cucumber.runtime.FeatureBuilder.parse(FeatureBuilder.java:133)
+	at cucumber.runtime.model.CucumberFeature.loadFromFeaturePath(CucumberFeature.java:104)
+	at cucumber.runtime.model.CucumberFeature.load(CucumberFeature.java:54)
+	at cucumber.runtime.model.CucumberFeature.load(CucumberFeature.java:34)
+	at cucumber.runtime.RuntimeOptions.cucumberFeatures(RuntimeOptions.java:235)
+	at cucumber.api.testng.TestNGCucumberRunner.getFeatures(TestNGCucumberRunner.java:85)
+	at cucumber.api.testng.TestNGCucumberRunner.provideFeatures(TestNGCucumberRunner.java:93)
+	at impactXchange.Impact_exchange_runner.features(Impact_exchange_runner.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	... 22 more
+Caused by: gherkin.lexer.LexingError: Lexing error on line 34: &apos;Date: &quot;Saturday, October 05, 2019&quot; , 
+   Rating: &quot;U&quot; , 
+   generic: &quot;Animation&quot; , 
+   language: &quot;English&quot; , 
+   type: &quot;3D&quot; ,
+   production: &quot;Aamir Khan Productions Pvt. Ltd.&quot; , 
+   Movie-length: &quot;150&quot; , 
+   director: &quot;George Miller&quot; ,
+   music-director: &quot;Junkie XL ,Tom Hardy&quot; , 
+   movie-stars: &quot;Charlize Theron,Nicholas Hoult,Hugh Keays-Byrne,Rosie Huntington-Whiteley,Riley Keough,Zo? Kravitz,Abbey Lee,Courtney Eaton&quot; .
+   Then close browser.
+   Examples:
+   |Movie_name|
+   |War|
+   
+   
+   @Edit_link
+   Scenario: To test edit movie to link UFO movie
+   Given Login.
+   Then Click on movie .
+   Then Click on icon link ufo movie.
+   
+    
+%_FEATURE_END_%&apos;. See http://wiki.github.com/cucumber/gherkin/lexingerror for more information.
+	at gherkin.lexer.En.scan(En.java:872)
+	at gherkin.lexer.I18nLexer.scan(I18nLexer.java:36)
+	at gherkin.parser.Parser.parse(Parser.java:62)
+	at cucumber.runtime.FeatureBuilder.parse(FeatureBuilder.java:131)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace32299666", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace32299666'><pre>java.lang.RuntimeException: cucumber.runtime.CucumberException: Error parsing feature file src/test/java/impactXchange/impact_exchange_scenarios.feature
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
 	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
 	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
@@ -125,9 +171,55 @@ Method public void testng_framework.Login_testng.s1(java.lang.String) throws jav
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: cucumber.runtime.CucumberException: Error parsing feature file src/test/java/impactXchange/impact_exchange_scenarios.feature
+	at cucumber.runtime.FeatureBuilder.parse(FeatureBuilder.java:133)
+	at cucumber.runtime.model.CucumberFeature.loadFromFeaturePath(CucumberFeature.java:104)
+	at cucumber.runtime.model.CucumberFeature.load(CucumberFeature.java:54)
+	at cucumber.runtime.model.CucumberFeature.load(CucumberFeature.java:34)
+	at cucumber.runtime.RuntimeOptions.cucumberFeatures(RuntimeOptions.java:235)
+	at cucumber.api.testng.TestNGCucumberRunner.getFeatures(TestNGCucumberRunner.java:85)
+	at cucumber.api.testng.TestNGCucumberRunner.provideFeatures(TestNGCucumberRunner.java:93)
+	at impactXchange.Impact_exchange_runner.features(Impact_exchange_runner.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	... 22 more
+Caused by: gherkin.lexer.LexingError: Lexing error on line 34: &apos;Date: &quot;Saturday, October 05, 2019&quot; , 
+   Rating: &quot;U&quot; , 
+   generic: &quot;Animation&quot; , 
+   language: &quot;English&quot; , 
+   type: &quot;3D&quot; ,
+   production: &quot;Aamir Khan Productions Pvt. Ltd.&quot; , 
+   Movie-length: &quot;150&quot; , 
+   director: &quot;George Miller&quot; ,
+   music-director: &quot;Junkie XL ,Tom Hardy&quot; , 
+   movie-stars: &quot;Charlize Theron,Nicholas Hoult,Hugh Keays-Byrne,Rosie Huntington-Whiteley,Riley Keough,Zo? Kravitz,Abbey Lee,Courtney Eaton&quot; .
+   Then close browser.
+   Examples:
+   |Movie_name|
+   |War|
+   
+   
+   @Edit_link
+   Scenario: To test edit movie to link UFO movie
+   Given Login.
+   Then Click on movie .
+   Then Click on icon link ufo movie.
+   
+    
+%_FEATURE_END_%&apos;. See http://wiki.github.com/cucumber/gherkin/lexingerror for more information.
+	at gherkin.lexer.En.scan(En.java:872)
+	at gherkin.lexer.I18nLexer.scan(I18nLexer.java:36)
+	at gherkin.parser.Parser.parse(Parser.java:62)
+	at cucumber.runtime.FeatureBuilder.parse(FeatureBuilder.java:131)
+	... 36 more
 </pre></div></td>
 <td>0</td>
-<td>testng_framework.Login_testng@11c1ea0</td></tr>
+<td>impactXchange.Impact_exchange_runner@18c1321</td></tr>
 </table><p>
 </body>
 </html>

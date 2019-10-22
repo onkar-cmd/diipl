@@ -106,3 +106,48 @@ Then Log out and see that password is changed or not.
 #Funcnality is incomplete.
 #Froget password link doesnt sent to respective email id
 
+@Check_cancellation_of_media
+Scenario: Testing Completed Creation and Campaign and media after media cancellation from approver.
+Given Login with predefined account from Cinean app.
+Then  Create Campaign and select predefined media.
+Then After Creation of Process of Campaign Go to Cinean Approver app
+Then Reject that respective media.
+Then Validate respective Campaign and media is been deleted .
+
+@media_cancellation @mute_image
+Scenario: Testing media Rejection
+Given Login with predefined account from cinean app.
+Then Click on media and create mute image.
+Then After creation of media ,go to cinean approver app
+Then Go to respective media and click on accept.
+Then Click on reject and validate whether that media is been deleted or not.
+
+#If media is reject with Campaign refund 
+
+@Check_media_language @signup
+Scenario: Testing Media different langauage synchronized with approver
+Given Signup account and select Marathi as default language media.
+Then Create Media for marathi language.
+Then Go to English approver account and check media should not generate marathi media.
+
+@Check_media_language @updating_language
+Scenario: Testing Update of media language pop up
+Given Login with English Cinean account.
+Then Create media and update language as marathi
+Then Go to Marathi approver and check  media should be generate marathi media.
+
+
+
+@Check_media_multiple_accounts
+Scenario: Testing approver app from 3 accounts
+Given Login with English Cinean account and there should be 3 mobile phones to validate media.
+Then Create media .
+Then check account1 and click on accept and logout and login with account2 and wait for 15 min whether notification is coming or not for account2.
+Then check account2 and click on accept and logout and login with account3 and wait for 15 min whether notification is coming or not for account3.
+
+
+
+
+   
+
+

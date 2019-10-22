@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="74" started-at="2019-10-19T09:56:30Z" finished-at="2019-10-19T09:56:30Z">
+  <suite name="Default suite" duration-ms="642" started-at="2019-10-21T07:16:00Z" finished-at="2019-10-21T07:16:01Z">
     <groups>
+      <group name="cucumber">
+        <method signature="Impact_exchange_runner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:impactXchange.Impact_exchange_runner@18c1321]" name="feature" class="impactXchange.Impact_exchange_runner"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="74" started-at="2019-10-19T09:56:30Z" finished-at="2019-10-19T09:56:30Z">
-      <class name="testng_framework.Login_testng">
-        <test-method status="FAIL" signature="s1(java.lang.String)[pri:0, instance:testng_framework.Login_testng@11c1ea0]" name="s1" duration-ms="0" started-at="2019-10-19T09:56:30Z" data-provider="getdata" finished-at="2019-10-19T09:56:30Z">
-          <exception class="org.testng.TestNGException">
+    <test name="Default test" duration-ms="642" started-at="2019-10-21T07:16:00Z" finished-at="2019-10-21T07:16:01Z">
+      <class name="impactXchange.Impact_exchange_runner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:impactXchange.Impact_exchange_runner@18c1321]" name="setUpClass" is-config="true" duration-ms="426" started-at="2019-10-21T07:16:00Z" finished-at="2019-10-21T07:16:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="SKIP" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:impactXchange.Impact_exchange_runner@18c1321]" name="feature" duration-ms="0" started-at="2019-10-21T07:16:01Z" description="Run cucumber Features" data-provider="features" finished-at="2019-10-21T07:16:01Z">
+          <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[
-Method public void testng_framework.Login_testng.s1(java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : getdata]]>
+              <![CDATA[cucumber.runtime.CucumberException: Error parsing feature file src/test/java/impactXchange/impact_exchange_scenarios.feature]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Method public void testng_framework.Login_testng.s1(java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : getdata
-at org.testng.internal.Parameters.findDataProvider(Parameters.java:513)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:691)
+              <![CDATA[java.lang.RuntimeException: cucumber.runtime.CucumberException: Error parsing feature file src/test/java/impactXchange/impact_exchange_scenarios.feature
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
 at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
 at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
 at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
@@ -38,13 +44,63 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: cucumber.runtime.CucumberException: Error parsing feature file src/test/java/impactXchange/impact_exchange_scenarios.feature
+at cucumber.runtime.FeatureBuilder.parse(FeatureBuilder.java:133)
+at cucumber.runtime.model.CucumberFeature.loadFromFeaturePath(CucumberFeature.java:104)
+at cucumber.runtime.model.CucumberFeature.load(CucumberFeature.java:54)
+at cucumber.runtime.model.CucumberFeature.load(CucumberFeature.java:34)
+at cucumber.runtime.RuntimeOptions.cucumberFeatures(RuntimeOptions.java:235)
+at cucumber.api.testng.TestNGCucumberRunner.getFeatures(TestNGCucumberRunner.java:85)
+at cucumber.api.testng.TestNGCucumberRunner.provideFeatures(TestNGCucumberRunner.java:93)
+at impactXchange.Impact_exchange_runner.features(Impact_exchange_runner.java:44)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+... 22 more
+Caused by: gherkin.lexer.LexingError: Lexing error on line 34: 'Date: "Saturday, October 05, 2019" , 
+   Rating: "U" , 
+   generic: "Animation" , 
+   language: "English" , 
+   type: "3D" ,
+   production: "Aamir Khan Productions Pvt. Ltd." , 
+   Movie-length: "150" , 
+   director: "George Miller" ,
+   music-director: "Junkie XL ,Tom Hardy" , 
+   movie-stars: "Charlize Theron,Nicholas Hoult,Hugh Keays-Byrne,Rosie Huntington-Whiteley,Riley Keough,Zo� Kravitz,Abbey Lee,Courtney Eaton" .
+   Then close browser.
+   Examples:
+   |Movie_name|
+   |War|
+   
+   
+   @Edit_link
+   Scenario: To test edit movie to link UFO movie
+   Given Login.
+   Then Click on movie .
+   Then Click on icon link ufo movie.
+   
+    
+%_FEATURE_END_%'. See http://wiki.github.com/cucumber/gherkin/lexingerror for more information.
+at gherkin.lexer.En.scan(En.java:872)
+at gherkin.lexer.I18nLexer.scan(I18nLexer.java:36)
+at gherkin.parser.Parser.parse(Parser.java:62)
+at cucumber.runtime.FeatureBuilder.parse(FeatureBuilder.java:131)
+... 36 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- s1 -->
-      </class> <!-- testng_framework.Login_testng -->
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:impactXchange.Impact_exchange_runner@18c1321]" name="tearDownClass" is-config="true" duration-ms="32" started-at="2019-10-21T07:16:01Z" finished-at="2019-10-21T07:16:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- impactXchange.Impact_exchange_runner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

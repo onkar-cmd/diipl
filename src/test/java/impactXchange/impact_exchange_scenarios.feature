@@ -26,25 +26,13 @@ Feature: Add Edit account
    
    
    @testing_link_movie @cineworld @Add_link
-   Scenario Outline: To test Add movie to Link UFO movie
+   Scenario: To test Add movie to Link UFO movie
    Given Login .
    Then Click on new movie .
-   Then click on icon link Ufo movie "<Movie_name>".
-   Then Add all details about movie. 
-   Date: "Saturday, October 05, 2019" , 
-   Rating: "U" , 
-   generic: "Animation" , 
-   language: "English" , 
-   type: "3D" ,
-   production: "Aamir Khan Productions Pvt. Ltd." , 
-   Movie-length: "150" , 
-   director: "George Miller" ,
-   music-director: "Junkie XL ,Tom Hardy" , 
-   movie-stars: "Charlize Theron,Nicholas Hoult,Hugh Keays-Byrne,Rosie Huntington-Whiteley,Riley Keough,Zoë Kravitz,Abbey Lee,Courtney Eaton" .
+   Then click on icon link Ufo movie.
+   Then Add all details about movie ,data is been parameterized in excel sheets. 
    Then close browser.
-   Examples:
-   |Movie_name|
-   |War|
+   
    
    
    @Edit_link

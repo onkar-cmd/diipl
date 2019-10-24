@@ -7,10 +7,6 @@ import org.testng.annotations.Test;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
-
-
-
-	
 @CucumberOptions(features = { "src\\test\\java\\impactXchange\\impact_exchange_scenarios.feature" },
 	glue = {"impactXchange"},
 	tags = {"@testing_link_movie"},

@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
 public class Xchange_properties {
 	WebDriver wd;
 	Select s;
@@ -787,8 +786,4 @@ public void add_movie(String mo, String date_picker, String cer, String gen, Str
 		movie_stars(ms);
 		company_save_btn();
 		Thread.sleep(5000);
-		
-		                      
-	}
-
-}
+		}}

@@ -1,6 +1,5 @@
  
 Feature: Cinean and Cinean Approver.
-
 #pass
 @Sign_up_merchant
 Scenario: Signup with merchant.
@@ -123,7 +122,6 @@ Then Go to respective media and click on accept.
 Then Click on reject and validate whether that media is been deleted or not.
 
 #If media is reject with Campaign refund 
-
 @Check_media_language @signup
 Scenario: Testing Media different langauage synchronized with approver
 Given Signup account and select Marathi as default language media.
@@ -136,18 +134,9 @@ Given Login with English Cinean account.
 Then Create media and update language as marathi
 Then Go to Marathi approver and check  media should be generate marathi media.
 
-
-
 @Check_media_multiple_accounts
 Scenario: Testing approver app from 3 accounts
 Given Login with English Cinean account and there should be 3 mobile phones to validate media.
 Then Create media .
 Then check account1 and click on accept and logout and login with account2 and wait for 15 min whether notification is coming or not for account2.
 Then check account2 and click on accept and logout and login with account3 and wait for 15 min whether notification is coming or not for account3.
-
-
-
-
-   
-
-

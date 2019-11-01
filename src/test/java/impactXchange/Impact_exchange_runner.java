@@ -1,4 +1,5 @@
 package impactXchange;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -7,46 +8,36 @@ import org.testng.annotations.Test;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
-@CucumberOptions(features = { "src\\test\\java\\impactXchange\\impact_exchange_scenarios.feature" },
-	glue = {"impactXchange"},
-	tags = {"@testing_link_movie"},
-	dryRun = true,
-	format = {
-	        "pretty",
-	        "html:target/UFO/ufo_pretty",
-	},plugin = {"json:target/cucumber-reports/CucumberTestReport.json",
-			"html:target/cucumber-html-report"}
 
-	,monochrome = true )
+@CucumberOptions(features = { "src\\test\\java\\impactXchange\\reconcilation.feature" }, glue = {
+		"impactXchange" }, tags = { "@Group_reconcile" }, dryRun = false, format = { "pretty",
+				"html:target/UFO/ufo_pretty", }, plugin = { "json:target/cucumber-reports/CucumberTestReport.json",
+						"html:target/cucuzmber-html-report" }
 
-	public class Impact_exchange_runner 
-	{
-		private TestNGCucumberRunner testngcucumberrunner;
+		, monochrome = true)
 
-		@BeforeClass(alwaysRun = true)
-		public void setUpClass() throws Exception 
-		{
-			testngcucumberrunner = new TestNGCucumberRunner(this.getClass());
-	    }
+public class Impact_exchange_runner {
+	private TestNGCucumberRunner testngcucumberrunner;
 
-		@Test(groups = "cucumber", description = "Run cucumber Features", dataProvider = "features")
-		public void feature(CucumberFeatureWrapper cucumberFeature)
-		{
-			testngcucumberrunner.runCucumber(cucumberFeature.getCucumberFeature());
-		}
-		@DataProvider
-		public Object[][] features() 
-		{
-			return testngcucumberrunner.provideFeatures();
-		}
-
-		@AfterClass(alwaysRun = true)
-
-		public void tearDownClass() 
-		{
-			testngcucumberrunner.finish();
-		}
-
+	@BeforeClass(alwaysRun = true)
+	public void setUpClass() throws Exception {
+		testngcucumberrunner = new TestNGCucumberRunner(this.getClass());
 	}
 
+	@Test(groups = "cucumber", description = "Run cucumber Features", dataProvider = "features")
+	public void feature(CucumberFeatureWrapper cucumberFeature) {
+		testngcucumberrunner.runCucumber(cucumberFeature.getCucumberFeature());
+	}
 
+	@DataProvider
+	public Object[][] features() {
+		return testngcucumberrunner.provideFeatures();
+	}
+
+	@AfterClass(alwaysRun = true)
+
+	public void tearDownClass() {
+		testngcucumberrunner.finish();
+	}
+
+}

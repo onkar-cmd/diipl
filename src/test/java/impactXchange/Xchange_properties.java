@@ -1,6 +1,7 @@
 package impactXchange;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -8,21 +9,25 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 public class Xchange_properties {
 	WebDriver wd;
 	Select s;
 	Actions a;
+	WebDriverWait wait;
 
-	public Xchange_properties(WebDriver wd) 
-	{
+	public Xchange_properties(WebDriver wd) {
 		PageFactory.initElements(wd, this);
 		this.wd = wd;
 		a = new Actions(wd);
+		wait = new WebDriverWait(wd, 20);
 	}
 
 	@FindBy(how = How.ID, using = "LoginCtrl_UserName") // Login Username
 	private WebElement user_name;
-    public void usrname(String name) {
+
+	public void usrname(String name) {
 
 		user_name.sendKeys(name);
 
@@ -79,8 +84,9 @@ public class Xchange_properties {
 	public void company_name_1() {
 
 		company_name_1.click();
-     }
-    @FindBy(how = How.ID, using = "MainContentPlaceHolder_btnNext") // company next button
+	}
+
+	@FindBy(how = How.ID, using = "MainContentPlaceHolder_btnNext") // company next button
 	private WebElement next_btn;
 
 	public void next_btn() {
@@ -98,12 +104,24 @@ public class Xchange_properties {
 		class_name.sendKeys(name);
 	}
 
+	@FindBy(how = How.ID, using = "MainContentPlaceHolder_txtMovieID") // movie id
+	public WebElement movie_id;
+
 	@FindBy(how = How.ID, using = "MainContentPlaceHolder_btnAddClass") // add Class button
 	private WebElement add_Class_btn;
 
 	public void add_Class_btn() {
 
 		add_Class_btn.click();
+
+	}
+
+	@FindBy(how = How.ID, using = "MainContentPlaceHolder_GridView1_hylnkMovie_0") // first movie
+	private WebElement first_movie;
+
+	public void first_movie() {
+
+		first_movie.click();
 
 	}
 
@@ -198,6 +216,15 @@ public class Xchange_properties {
 
 	}
 
+	@FindBy(how = How.ID, using = "up-tab") // Upcoming Contracts
+	private WebElement up_con;
+
+	public void upcoming_contracts() {
+
+		up_con.click();
+
+	}
+
 	@FindBy(how = How.CSS, using = "a[href*='Edit $0']") // sofa edit button
 	private WebElement sofa_edit_btn;
 
@@ -224,67 +251,79 @@ public class Xchange_properties {
 		is_web_allowed.click();
 
 	}
-	
+
 	@FindBy(how = How.XPATH, using = "//a[@menuid='4']") // Contracts button
 	private WebElement contracts_btn;
 
-	public void contracts_btn() {
+	public void contracts_btn() throws InterruptedException {
+
+		Thread.sleep(2000);
 		contracts_btn.click();
 
 	}
-	
+
 	@FindBy(how = How.XPATH, using = "//a[@menuid='128']") // Reconcile local Contracts
 	private WebElement reconcile_local_contracts_btn;
 
-	public void reconcile_local_contracts_btn() {
+	public void reconcile_local_contracts_btn() throws InterruptedException {
+		Thread.sleep(2000);
 		reconcile_local_contracts_btn.click();
 
 	}
-	
-	@FindBy(how = How.XPATH, using = "//a[@menuid='260']") // Individual Reconcile 
+
+	@FindBy(how = How.XPATH, using = "//a[@menuid='260']") // Individual Reconcile
 	private WebElement individul_reconcile_btn;
 
-	public void individul_reconcile_btn() {
-		
+	public void individul_reconcile_btn() throws InterruptedException {
+
+		Thread.sleep(2000);
 		individul_reconcile_btn.click();
-		
 
 	}
-	
-	@FindBy(how = How.XPATH, using = "//a[@title='Link Cineworld']") // Link Ufo Movie link button 
+
+	@FindBy(how = How.XPATH, using = "//a[@title='Link Cineworld']") // Link Ufo Movie link button
 	private WebElement link_ufo_movie;
 
-	public void link_ufo_movie()
-	{
-		
+	public void link_ufo_movie() {
+
 		link_ufo_movie.click();
-		
 
 	}
 
 	// movie
 	// creation--------------------------------------------------------------------------------
 
-	@FindBy(how = How.XPATH, using = "//a[@menuid='2']") // Movie button
+	@FindBy(how = How.XPATH, using = "//*[@id=\"sidebar-menu\"]/div/ul/li[2]/a") // Movie button
 	private WebElement movie_btn;
 
 	public void movie_btn() {
 		movie_btn.click();
 
 	}
-	
+
 	@FindBy(how = How.XPATH, using = "//a[@menuid='261']") // Group Reconcile button
 	private WebElement group_reconcile;
 
-	public void group_reconcile() {
+	public void group_reconcile() throws InterruptedException {
+		Thread.sleep(2000);
 		group_reconcile.click();
 
 	}
 	
-	@FindBy(how = How.XPATH, using = "//a[@menuid='23']") // Manage Contracts 
+	@FindBy(how = How.XPATH, using = "//a[@menuid='55']") // Territory Allocation
+	private WebElement teritory_allocation;
+
+	public void teritory_allocation() throws InterruptedException {
+		Thread.sleep(2000);
+		teritory_allocation.click();
+
+	}
+
+	@FindBy(how = How.XPATH, using = "//a[@menuid='23']") // Manage Contracts
 	private WebElement manage_contracts;
 
 	public void manage_contracts() {
+
 		manage_contracts.click();
 
 	}
@@ -292,18 +331,41 @@ public class Xchange_properties {
 	@FindBy(how = How.XPATH, using = "//a[@menuid='15']") // Manage Movie button
 	private WebElement manage_movie_btn;
 
-	public void manage_movie_btn() 
-	{
+	public void manage_movie_btn() {
 		manage_movie_btn.click();
 
 	}
+
 	@FindBy(how = How.ID, using = "MainContentPlaceHolder_txtMovieName") // Add movie name
 	private WebElement movie_name_txt;
 
-	public void movie_name_txt(String ms) 
-	{
+	public void movie_name_txt(String ms) {
 		movie_name_txt.clear();
 		movie_name_txt.sendKeys(ms);
+	}
+
+	@FindBy(how = How.ID, using = "searchmn") // Filter Movie name
+	private WebElement filter_movie_name_txt;
+
+	public void filter_movie_name_txt(String ms) {
+		filter_movie_name_txt.clear();
+		filter_movie_name_txt.sendKeys(ms);
+	}
+
+	@FindBy(how = How.ID, using = "selectall") // Select all movie name
+	private WebElement selectall;
+
+	public void selectall() {
+		selectall.click();
+
+	}
+
+	@FindBy(how = How.ID, using = "MainContentPlaceHolder_btnSearch") // Manage Movie button
+	private WebElement search_movie_btn;
+
+	public void search_movie_btn() {
+		search_movie_btn.click();
+
 	}
 
 	@FindBy(how = How.XPATH, using = "//a[@title='Open the calendar popup.']") // Screen1 edit button
@@ -357,8 +419,7 @@ public class Xchange_properties {
 	@FindBy(how = How.ID, using = "MainContentPlaceHolder_txtMovieLength") // Add movie length
 	private WebElement movie_len;
 
-	public void movie_len(String len)
-	{
+	public void movie_len(String len) {
 		movie_len.clear();
 		movie_len.sendKeys(len);
 	}
@@ -424,7 +485,7 @@ public class Xchange_properties {
 		addnew_threater_layout.click();
 
 	}
-	
+
 	@FindBy(how = How.XPATH, using = "//button[@onclick='linkUfoMovie()']") // Link ufo movie button
 	private WebElement link_ufo_btn;
 
@@ -432,8 +493,6 @@ public class Xchange_properties {
 		link_ufo_btn.click();
 
 	}
-	
-	
 
 	@FindBy(how = How.ID, using = "MainContentPlaceHolder_ddlExhibitor") // select exhibitor
 	private WebElement select_exhibitor;
@@ -538,6 +597,15 @@ public class Xchange_properties {
 
 	}
 
+	@FindBy(how = How.ID, using = "MainContentPlaceHolder_RadGrid1_ctl00_ctl05_UpdateButton") // company save button
+	private WebElement reconcile_save_btn;
+
+	public void reconcile_save_btn() {
+
+		reconcile_save_btn.click();
+
+	}
+
 	@FindBy(how = How.ID, using = "MainContentPlaceHolder_txtContactPerson") // Account Contact Person
 	private WebElement contact_person;
 
@@ -607,28 +675,49 @@ public class Xchange_properties {
 	@FindBy(how = How.ID, using = "MainContentPlaceHolder_ddlTerritory") // select Account territory
 	private WebElement select_territory;
 
-	public void select_territory(String st) 
-	{
+	public void select_territory(String st) {
 		s = new Select(select_territory);
 		s.selectByVisibleText(st);
 	}
-	
 
-	@FindBy(how = How.ID, using = "MainContentPlaceHolder_RadGrid1_ctl00_ctl05_ddlMovie") // select approve movie in reconcile page
+	@FindBy(how = How.ID, using = "MainContentPlaceHolder_RadGrid1_ctl00_ctl05_ddlMovie") // select approve movie in
+																							// reconcile page
 	private WebElement select_approve_movie;
 
 	public void select_approve_movie(String st) {
 		s = new Select(select_approve_movie);
 		s.selectByValue(st);
 	}
-	
-	@FindBy(how = How.ID, using = "MainContentPlaceHolder_RadGrid1_ctl00_ctl05_ddlDistributor") // select approve movie in reconcile page
+
+	@FindBy(how = How.ID, using = "ddlMovie") // select Movie group reconcilation
+																							 
+	private WebElement select_movie_group_reconcile;
+
+	public void select_movie_group_reconcile(String st)
+	{
+		s = new Select(select_movie_group_reconcile);
+		s.selectByValue(st);
+	}
+
+	@FindBy(how = How.ID, using = "MainContentPlaceHolder_RadGrid1_ctl00_ctl05_ddlDistributor") // select approve movie
+																								// in reconcile page
 	private WebElement select_distributer;
 
 	public void select_distributer(String st) {
 		s = new Select(select_distributer);
 		s.selectByValue(st);
 	}
+	
+	@FindBy(how = How.ID, using = "MainContentPlaceHolder_ddlMovie") // select movie
+private WebElement select_Movie;
+
+public void select_Movie(String st) {
+	s = new Select(select_Movie);
+	s.selectByValue(st);
+}
+	
+	
+
 	@FindBy(how = How.ID, using = "MainContentPlaceHolder_txtTheaterName") // Account Threater name
 	private WebElement threater_name;
 
@@ -644,18 +733,21 @@ public class Xchange_properties {
 		is_rounding_in_reports.click();
 
 	}
-	
+
 	@FindBy(how = How.ID, using = "MainContentPlaceHolder_RadGrid1_ctl00_ctl05_UpdateButton") // Save button reconcile
-	private WebElement save_btn_reconcile ;
-	public void save_btn_reconcile() 
-	{
+	private WebElement save_btn_reconcile;
+
+	public void save_btn_reconcile() {
 		save_btn_reconcile.click();
-    }
+	}
+
 	@FindBy(how = How.XPATH, using = "//*[@id=\"imgPactTab_1\"]") // Save button reconcile
-	private WebElement upcoming_pacts ;
+	private WebElement upcoming_pacts;
+
 	public void upcoming_pacts() {
 		a.click(upcoming_pacts).build().perform();
-    }
+	}
+
 	@FindBy(how = How.ID, using = "MainContentPlaceHolder_txtMaxGuaranteeAmount") // Account Max. Guarantee Amount
 	private WebElement max_guareentee_amount;
 
@@ -680,23 +772,37 @@ public class Xchange_properties {
 
 	}
 	
-	@FindBy(how = How.XPATH, using = "//*[@href=\"javascript:__doPostBack('ctl00$MainContentPlaceHolder$RadGrid1$ctl00$ctl02$ctl01$ctl00','')\"]") // Contract Id label click
-	private WebElement contract_id;
+	@FindBy(how = How.ID, using = "MainContentPlaceHolder_RadGrid1_ctl00_ctl04_EditButton") // Territory allocation Edit button
+	private WebElement territory_allocation_edit;
 
-	public void contract_id()
-	{
-		a.click(contract_id).build().perform();
-		
+	public void territory_allocation_edit() {
+		territory_allocation_edit.click();
 
 	}
-	 public void login() {
+
+	
+	
+	@FindBy(how = How.XPATH, using = "//*[@href=\"javascript:__doPostBack('ctl00$MainContentPlaceHolder$RadGrid1$ctl00$ctl02$ctl01$ctl00','')\"]") // Contract
+																																					// Id
+																																					// label
+																																					// click
+	private WebElement contract_id;
+
+	public void contract_id() {
+		a.click(contract_id).build().perform();
+
+	}
+	
+	
+
+	public void login() {
 		wd.get("http://cloudtestimpactexchange.impactexchange.com/ImpactLive/Index.aspx?AspxAutoDetectCookieSupport=1#");
 		usrname("admin");
 		password("admin");
 		login_btn();
 	}
-	public void enter_seats(String[] strArray, int no_of_rows, int seat_count) 
-	{
+
+	public void enter_seats(String[] strArray, int no_of_rows, int seat_count) {
 
 		int seats_count = seat_count + 2;
 		for (int i = 0; i < no_of_rows; i++) {
@@ -736,7 +842,7 @@ public class Xchange_properties {
 			Thread.sleep(5000);
 			address1(a1);
 			address2(a2);
-            pin_code(p);
+			pin_code(p);
 			tel(t);
 			threater_name(tn);
 			ticket_bifurcation_amount(tba);
@@ -752,8 +858,10 @@ public class Xchange_properties {
 		class_name(c);
 		select_class_category(scs);
 		add_Class_btn();
-        class_next_btn();  }
-public void add_screen(String sc, String wc) {
+		class_next_btn();
+	}
+
+	public void add_screen(String sc, String wc) {
 		screen_name_txt(sc);
 		ufo_checkbox();
 		ac_checkbox();
@@ -761,15 +869,17 @@ public void add_screen(String sc, String wc) {
 		add_screen_btn();
 		screen_next_btn();
 	}
-public void add_class_screen_details(String tr, String s) {
+
+	public void add_class_screen_details(String tr, String s) {
 		ticket_fare(tr);
 		seats_txtbx(s);
 		is_web_allowed();
 		add_btn();
 		class_scree_submit_btn();
-}
-public void add_movie(String mo, String date_picker, String cer, String gen, String lan, String type,String prod,String len, String dir, String m, String ms) throws InterruptedException
-	{   
+	}
+
+	public void add_movie(String mo, String date_picker, String cer, String gen, String lan, String type, String prod,
+			String len, String dir, String m, String ms) throws InterruptedException {
 		Thread.sleep(5000);
 		manage_movie_btn();
 		add_new_btn();
@@ -786,4 +896,18 @@ public void add_movie(String mo, String date_picker, String cer, String gen, Str
 		movie_stars(ms);
 		company_save_btn();
 		Thread.sleep(5000);
-		}}
+	}
+	
+	public void territory_allocation(String s) throws InterruptedException
+	{
+		
+		teritory_allocation();
+		select_Movie(s);
+		territory_allocation_edit();
+		Thread.sleep(2000);
+		a.moveToElement(wd.findElement(By.id("MainContentPlaceHolder_RadGrid1_ctl00_ctl04_RadComboBox4_Input"))).click()
+				.sendKeys("w").sendKeys("w").sendKeys(Keys.ENTER).perform();
+        wd.findElement(By.id("MainContentPlaceHolder_RadGrid1_ctl00_ctl04_UpdateButton")).click();
+
+	}
+}

@@ -33,8 +33,6 @@ Feature: Add Edit account
    Then Add all details about movie ,data is been parameterized in excel sheets. 
    Then close browser.
    
-   
-   
    @Edit_link
    Scenario: To test edit movie to link UFO movie
    Given Login.

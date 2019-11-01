@@ -2,31 +2,34 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44867" started-at="2019-10-24T09:01:19Z" finished-at="2019-10-24T09:02:04Z">
+  <suite name="Default suite" duration-ms="180449" started-at="2019-11-01T07:11:57Z" finished-at="2019-11-01T07:14:57Z">
     <groups>
+      <group name="cucumber">
+        <method signature="Impact_exchange_runner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:impactXchange.Impact_exchange_runner@18c1321]" name="feature" class="impactXchange.Impact_exchange_runner"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="44867" started-at="2019-10-24T09:01:19Z" finished-at="2019-10-24T09:02:04Z">
-      <class name="testng_framework.Login_testng">
-        <test-method status="PASS" signature="s2()[pri:0, instance:testng_framework.Login_testng@1579e0f]" name="s2" is-config="true" duration-ms="21749" started-at="2019-10-24T09:01:20Z" finished-at="2019-10-24T09:01:42Z">
+    <test name="Default test" duration-ms="180449" started-at="2019-11-01T07:11:57Z" finished-at="2019-11-01T07:14:57Z">
+      <class name="impactXchange.Impact_exchange_runner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:impactXchange.Impact_exchange_runner@18c1321]" name="setUpClass" is-config="true" duration-ms="399" started-at="2019-11-01T07:11:57Z" finished-at="2019-11-01T07:11:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- s2 -->
-        <test-method status="PASS" signature="s1(java.util.ArrayList)[pri:0, instance:testng_framework.Login_testng@1579e0f]" name="s1" duration-ms="18904" started-at="2019-10-24T09:01:42Z" data-provider="Passing parameters" finished-at="2019-10-24T09:02:01Z">
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:impactXchange.Impact_exchange_runner@18c1321]" name="feature" duration-ms="179872" started-at="2019-11-01T07:11:57Z" description="Run cucumber Features" data-provider="features" finished-at="2019-11-01T07:14:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[dusane.infotech, Di@222]]]>
+                <![CDATA[Recocilation process]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- s1 -->
-        <test-method status="PASS" signature="s3()[pri:0, instance:testng_framework.Login_testng@1579e0f]" name="s3" is-config="true" duration-ms="3121" started-at="2019-10-24T09:02:01Z" finished-at="2019-10-24T09:02:04Z">
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:impactXchange.Impact_exchange_runner@18c1321]" name="tearDownClass" is-config="true" duration-ms="17" started-at="2019-11-01T07:14:57Z" finished-at="2019-11-01T07:14:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- s3 -->
-      </class> <!-- testng_framework.Login_testng -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- impactXchange.Impact_exchange_runner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

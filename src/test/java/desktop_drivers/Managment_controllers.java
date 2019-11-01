@@ -8,6 +8,8 @@ import org.openqa.selenium.winium.WiniumDriver;
 
 public class Managment_controllers {
 	
+	
+	
 	private static WiniumDriver wd;
 
 	public  WiniumDriver getDriver() 
@@ -19,7 +21,7 @@ public class Managment_controllers {
 	{
 	
 		DesktopOptions op = new DesktopOptions();
-		op.setApplicationPath("D:\\ImpactHandover-08-Aug-19\\ReleaseSoftware\\LatestSoftware-08-08-19\\Management Console-4.3.0.0\\ManagementConsole.exe");
+		op.setApplicationPath("D:\\Impact all relase software\\LatestSoftware-08-08-19\\Management Console-4.3.0.0\\ManagementConsole.exe");
 		op.setDebugConnectToRunningApp(false);
 		op.setLaunchDelay(2);
 		wd = new WiniumDriver(new URL("http://localhost:9999"), op);

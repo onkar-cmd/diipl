@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.winium.WiniumDriver;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Screen;
@@ -20,6 +21,7 @@ import org.sikuli.script.Screen;
 public class Managment_objects {
 	WebDriver wd = null;
 	Screen screen = new Screen();
+	
 	
 	
 	
@@ -90,6 +92,7 @@ public class Managment_objects {
 	// objects----------------------------------------------------------------------------------------------------------------------
 
 	public void movie_btn() throws AWTException, FindFailed {
+		
 		
 		screen.click("D:\\sikuli image\\movie.png");
 		
